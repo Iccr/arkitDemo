@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="arkitDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XIN-GO-BEf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V3a-Ii-5cR">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cop-lN-oL8">
+                                <rect key="frame" x="136" y="617" width="85" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="create plane"/>
+                                <connections>
+                                    <action selector="createPlane:" destination="BV1-FR-VrT" eventType="touchUpInside" id="12K-sX-Le5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="V3a-Ii-5cR" secondAttribute="trailing" id="M9c-gL-iqm"/>
+                            <constraint firstItem="V3a-Ii-5cR" firstAttribute="top" secondItem="nzQ-rk-4qT" secondAttribute="top" id="rYH-gF-ZNb"/>
+                            <constraint firstItem="V3a-Ii-5cR" firstAttribute="leading" secondItem="nzQ-rk-4qT" secondAttribute="leading" id="tsk-AY-2mU"/>
+                            <constraint firstItem="nzQ-rk-4qT" firstAttribute="bottom" secondItem="V3a-Ii-5cR" secondAttribute="bottom" id="zxz-98-FAp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nzQ-rk-4qT"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonActivate" destination="Cop-lN-oL8" id="SA3-7C-4QK"/>
+                        <outlet property="sceneView" destination="V3a-Ii-5cR" id="amJ-RF-ILd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
